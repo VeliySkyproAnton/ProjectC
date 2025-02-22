@@ -1,30 +1,24 @@
 public class Main {
     public static void main(String[] args) {
         byte personAgeOne = 19;
-        byte personAgeTwo = 17;
-        if (personAgeOne > 18) {
+        if (personAgeOne >= 18) {
             System.out.println("Если возраст человека равен " + personAgeOne + ", то он совершеннолетний");
-        }
-        if (personAgeTwo < 18) {
-            System.out.println("Если возраст человека равен " + personAgeTwo + ", то он не достиг совершеннолетия, нужно немного подождать.");
+        } else {
+            System.out.println("Если возраст человека равен " + personAgeOne + ", то он не достиг совершеннолетия, нужно немного подождать.");
         }
 
         byte temperatureOne = 4;
-        byte temperatureTwo = 6;
         if (temperatureOne < 5) {
             System.out.println("На улице " + temperatureOne + " градусов, нужно надеть шапку");
-        }
-        if (temperatureTwo > 5) {
-            System.out.println("На улице " + temperatureTwo + " градусов, можно идти без шапки");
+        } else {
+            System.out.println("На улице " + temperatureOne + " градусов, можно идти без шапки");
         }
 
         byte speedAutoOne = 61;
-        byte speedAutoTwo = 59;
         if (speedAutoOne > 60) {
             System.out.println("Если скорость " + speedAutoOne + ", то придется заплатить штраф");
-        }
-        if (speedAutoTwo < 60) {
-            System.out.println("Если скорость " + speedAutoTwo + ", то можно ездить спокойно");
+        } else {
+            System.out.println("Если скорость " + speedAutoOne + ", то можно ездить спокойно");
         }
 
         byte ageKid = 2;
@@ -48,7 +42,7 @@ public class Main {
         if (kidAge < 5) {
             System.out.println("Если возраст ребенка равен " + kidAge + ", то ему  нельзя кататься на аттракционе");
         }
-        if (kidAge > 5 && kidAge < 14) {
+        if (kidAge >= 5 && kidAge < 14) {
             System.out.println("Если возраст ребенка равен " + kidAge + ", то ему  можно кататься на аттракционе в сопровождении");
         }
         if (kidAge >= 14) {
@@ -58,13 +52,12 @@ public class Main {
         byte carriageCapacity = 102;
         byte seatingPositions = 60;
         int standingPlaces = carriageCapacity - seatingPositions;
-        if (seatingPositions > 60) {
-            System.out.println("Сидячих мест нет, есть стоячие");
-        } else {
-            System.out.println("Сидячие места есть");
-        }
-        if (standingPlaces > 42) {
+        if (standingPlaces == 0) {
             System.out.println("Вагон полностью забит");
+        } else if (seatingPositions > 0) {
+            System.out.println("Сидячие места есть");
+        } else if (seatingPositions > 0) {
+            System.out.println("Сидячих мест нет, есть стоячие");
         }
 
         int one = 1;
